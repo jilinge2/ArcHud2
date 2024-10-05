@@ -95,6 +95,10 @@ LM:RegisterTranslations("zhCN", function() return {
       ["Version: "]   = "\231\137\136\230\156\172",
       ["Author: "]   = "\228\189\156\232\128\133",
 
+      ["ShieldCombined"] = "综合护盾",
+		["ShieldIceBarrier"] = "寒冰护体",
+		["ShieldMana"] = "法力护盾",
+
       ["Health"]         = "\231\142\169\229\174\182\231\148\159\229\145\189",
       ["Mana"]         = "\231\142\169\229\174\182\233\173\148\230\179\149",
       ["PetHealth"]      = "\229\174\160\231\137\169\231\148\159\229\145\189",
@@ -142,3 +146,61 @@ LM:RegisterTranslations("zhCN", function() return {
          RIGHT      = "\229\143\179\232\190\185\229\174\154\228\189\141",
       },
 } end)
+
+local LST = AceLibrary("AceLocale-2.0"):new("ArcHUD_ShieldTracker")
+
+LST:RegisterTranslations("zhCN", function()
+	return {
+        ["Power Word: Shield"] = "真言术：盾",
+        ["Power Word\: Shield"] = "真言术：盾",
+        ["Ice Barrier"] = "寒冰护体",
+        ["Mana Shield"] = "法力护盾",
+        ["Frost Resistance"] = "冰霜抗性",
+        ["Frost Ward"] = "防护冰霜结界",
+        ["Fire Resistance"] = "火焰抗性",
+        ["Fire Ward"] = "防护火焰结界",
+        ["Frost Protection"] = "防护冰霜",
+        ["Fire Protection"] = "防护火焰",
+        ["Nature Protection"] = "防护自然",
+        ["Shadow Protection"] = "防护暗影",
+        ["Arcane Protection"] = "防护奥术",
+        ["Holy Protection"] = "防护神圣",
+        ["Protection"] = "防护",
+        ["The Burrower's Shell"] = "穴居虫之壳",
+        ["Burrower Shell"] = "穴居虫之壳",
+        ["Shadow Ward"] = "防护暗影结界",
+        ["Sacrifice"] = "牺牲",
+
+        ["Physical"] = "物理",
+        ["Frost"] = "冰霜",
+        ["Fire"] = "火焰",
+        ["Arcane"] = "奥术",
+        ["Shadow"] = "暗影",
+        ["Nature"] = "自然",
+        ["Holy"] = "神圣",
+
+
+        ["(.+) fades from you"] = "(.+)效果从你身上消失了",
+        ["hits you for"] = "击中你造成",
+        ["^You suffer"] = "^你受到",
+        ["crits you for"] = "致命一击对你造成",
+
+        -- Fs's Fireball crits you for 0 Fire damage. (307 absorbed)
+        -- Fs's Fireball hits you for 0 Fire damage. (21 absorbed)
+        -- Fs的火球术击中你造成0点火焰伤害。(22点被吸收)
+
+        -- You suffer 0 Fire damage from Fse's Fireball. (1 absorbed)
+        -- 你受到0点火焰伤害（Fs的火球术）。(1点被吸收)
+
+        -- Fs hits you for 0. (8 absorbed)
+        -- Fs击中你造成0点伤害。(24点被吸收)
+
+        ["%d+ (%w+) damage from.*%((%d+) absorbed%)"] = "%d+点(.+)伤害。%((%d+)点被吸收%)",
+        ["%d+ (%w+) damage.*%((%d+) absorbed%)"] = "你受到%d+点(.+)伤害.+。%((%d+)点被吸收%)",
+        ["for %d+.*%((%d+) absorbed%)"] = "%d+点伤害。%((%d+)点被吸收%)",
+
+        -- Rings_Casting
+        ["Failed"] = "失败",
+        ["Interrupted"] = "已打断"
+    }
+end)

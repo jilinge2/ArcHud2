@@ -41,7 +41,7 @@ ArcHUD:RegisterDefaults("profile", {
 	AttachTop = false,
 	ShowBuffs = true,
 	HoverMsg = true,
-	HoverDelay = 3,
+	HoverDelay = 0.5,
 	BlizzPlayer = true,
 	BlizzTarget = true,
 })

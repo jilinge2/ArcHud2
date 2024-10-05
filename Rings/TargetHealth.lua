@@ -7,7 +7,7 @@ module.defaults = {
 	Outline = true,
 	ShowPerc = true,
 	Side = 1,
-	Level = 1,
+	Level = 2,
 }
 module.options = {
 	{name = "ShowPerc", text = "SHOWPERC", tooltip = "SHOWPERC"},

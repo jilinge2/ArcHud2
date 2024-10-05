@@ -94,6 +94,12 @@ LM:RegisterTranslations("enUS", function() return {
 		["Version: "]	= true,
 		["Author: "]	= true,
 
+
+		["ShieldCombined"] = "Combined Shield",
+		["ShieldIceBarrier"] = "Ice Barrier",
+		["ShieldMana"] = "Mana Shield",
+
+
 		["Health"]			= "Player Health",
 		["Mana"]			= "Player Mana",
 		["PetHealth"]		= "Pet Health",
@@ -141,3 +147,50 @@ LM:RegisterTranslations("enUS", function() return {
 			RIGHT		= "Right anchor",
 		},
 } end)
+
+
+local LST = AceLibrary("AceLocale-2.0"):new("ArcHUD_ShieldTracker")
+
+LST:RegisterTranslations("enUS", function()
+	return {
+        ["Power Word: Shield"] = true,
+        ["Power Word\: Shield"] = true,
+        ["Ice Barrier"] = true,
+        ["Mana Shield"] = true,
+        ["Frost Resistance"] = true,
+        ["Frost Ward"] = true,
+        ["Fire Resistance"] = true,
+        ["Fire Ward"] = true,
+        ["Frost Protection"] = true,
+        ["Fire Protection"] = true,
+        ["Nature Protection"] = true,
+        ["Shadow Protection"] = true,
+        ["Arcane Protection"] = true,
+        ["Holy Protection"] = true,
+        ["Protection"] = true,
+        ["The Burrower\'s Shell"] = true,
+        ["Burrower Shell"] = true,
+        ["Shadow Ward"] = true,
+        ["Sacrifice"] = true,
+
+        ["Physical"] = true,
+        ["Frost"] = true,
+        ["Fire"] = true,
+        ["Arcane"] = true,
+        ["Shadow"] = true,
+        ["Nature"] = true,
+        ["Holy"] = true,
+
+        ["(.+) fades from you"] = true,
+        ["hits you for"] = true,
+        ["^You suffer"] = true,
+        ["crits you for"] = true,
+        ["%d+ (%w+) damage from.*%((%d+) absorbed%)"] = true,
+        ["%d+ (%w+) damage.*%((%d+) absorbed%)"] = true,
+        ["for %d+.*%((%d+) absorbed%)"] = true,
+
+        -- Rings_Casting
+        ["Failed"] = true,
+        ["Interrupted"] = true,
+    }
+end)

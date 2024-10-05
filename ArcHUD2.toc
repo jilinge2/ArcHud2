@@ -1,7 +1,7 @@
 ## Interface: 11200
 ## Title: ArcHUD |cff7fff7f -Ace2-|r
 ## Notes: Combat HUD based on NurfedHUD. |cff55b7f4Fixed by Balakinuser|r
-## Author: Uruloke
+## Author: Uruloke, pepopo978
 ## SavedVariables: ArcHUDDB
 ## Version: 2.0
 ## X-Date: $Date: 2006-09-16 18:32:57 +0600 (Сб, 16 сен 2006) $
@@ -37,6 +37,7 @@ Core.xml
 Core.lua
 Utils.lua
 RingTemplate.lua
+ShieldTracker.lua
 ModuleCore.lua
 FuBarPlugin.lua
 
@@ -52,3 +53,6 @@ Rings\Casting.lua
 Rings\MirrorTimer.lua
 Rings\ComboPoints.lua
 Rings\DruidMana.lua
+Rings\ShieldCombined.lua
+Rings\ShieldIceBarrier.lua
+Rings\ShieldMana.lua
